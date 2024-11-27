@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playlist-youra</title>
+    <link href="/style.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/c0ce7b2c8e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bagel+Fat+One&family=Cinzel:wght@400..900&family=Marcellus&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Orbit&family=Pacifico&family=Rubik+Bubbles&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-title">YOURA</div>
+    </header>
+    <nav>
+      <a href="/home.html">HOME</a>
+      <a href="/about.html">ABOUT</a>
+    </nav>
+    <div class="content-container">
+      <main>
+        <section>
+          <article class="album">
+            <div class="album-title">ALBUMS</div>
+            <div class="album-img-container">
+              <img
+                src="./images/album1.jpeg"
+                class="album-img"
+                id="album1"
+                data-album="album1"
+              />
+              <img
+                src="./images/album2.jpeg"
+                class="album-img"
+                id="album2"
+                data-album="album2"
+              />
+              <img
+                src="./images/album3.jpeg"
+                class="album-img"
+                id="album3"
+                data-album="album3"
+              />
+              <img
+                src="./images/album4.jpeg"
+                class="album-img"
+                id="album4"
+                data-album="album4"
+              />
+              <img
+                src="./images/album5.jpeg"
+                class="album-img"
+                id="album5"
+                data-album="album5"
+              />
+            </div>
+          </article>
+          <article class="song">
+            <div class="song-title">SONGS</div>
+            <div class="song-main">
+              <img src="./images/album1.jpeg" class="article-album-img" />
+              <ul id="song-list">
+                <li class="album-songs"></li>
+              </ul>
+            </div>
+          </article>
+        </section>
+      </main>
+      <aside>
+        <img src="./images/album1.jpeg" class="player-img" id="album-cover" />
+        <div class="audio-player">
+          <audio
+            id="audio"
+            src="./audios/Flicker.mp3"
+            class="player-mp3"
+          ></audio>
+          <div id="audio-title" class="audio-title">Flicker</div>
+          <div class="audio-singer">Youra</div>
+          <div class="audio-controls">
+            <button class="play-btn" id="play-btn">▶</button>
+            <div class="progress-bar" id="progress-bar">
+              <div></div>
+            </div>
+            <div class="time" id="time">0:00</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <footer>
+      <i class="fa-brands fa-instagram"></i>
+      <a
+        href="https://www.instagram.com/you.ra?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        class="footer-label"
+        target="_blank"
+        >instagram</a
+      >
+      <i class="fa-brands fa-youtube"></i>
+      <a
+        href="https://www.youtube.com/channel/UCrgmcWsu4pBRmEQz1l5cklQ"
+        class="footer-label"
+        target="_blank"
+        >youtude</a
+      >
+      <i class="fa-brands fa-spotify"></i>
+      <a
+        href="https://open.spotify.com/artist/5q9adPv91NFr8q2ZcKmX0V"
+        class="footer-label"
+        target="_blank"
+        >spotify</a
+      >
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

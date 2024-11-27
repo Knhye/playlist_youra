@@ -1,0 +1,320 @@
+body {
+  margin: 0;
+  height: 120vh;
+
+  background: linear-gradient(45deg, #f44369, #3e3b92);
+  background-size: 200% 200%;
+  animation: gradientWave 6s ease infinite;
+
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes gradientWave {
+  0% {
+    background-position: 0% 50%; /* 시작 위치 */
+  }
+  50% {
+    background-position: 100% 50%; /* 배경 이동 */
+  }
+  100% {
+    background-position: 0% 50%; /* 다시 원위치 */
+  }
+}
+
+.header-title {
+  font-size: 70px;
+  padding: 20px;
+  text-align: center;
+  color: whitesmoke;
+  font-weight: bolder;
+}
+
+nav {
+  font-size: 20px;
+  padding: 20px;
+  margin: 0 0 5% 37.5%;
+}
+
+nav a {
+  color: whitesmoke;
+  text-decoration-line: none;
+  padding-left: 100px;
+}
+
+.content-container {
+  display: flex;
+}
+
+section {
+  padding: 2% 5% 5% 5%;
+}
+
+.album,
+.song {
+  background-color: rgba(255, 255, 255, 0.277);
+  width: 95%;
+  height: auto;
+  padding: 3%;
+  border-radius: 50px;
+  margin-bottom: 30px;
+  margin-left: 15%;
+}
+.album-title,
+.song-title {
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bolder;
+  color: #000000af;
+}
+
+.album-img-container {
+  display: flex;
+  overflow-x: auto; /* 수평 스크롤 활성화 */
+  overflow-y: hidden; /* 세로 스크롤 비활성화 */
+  white-space: nowrap;
+}
+
+.album-img-container::-webkit-scrollbar {
+  display: none;
+}
+
+.album-img {
+  width: 150px;
+  padding: 25px;
+  padding-right: 0;
+  cursor: pointer;
+}
+
+.song-main {
+  display: flex;
+}
+
+.song-main img {
+  width: 300px;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.album-songs {
+  margin: 0 -40px 10px 20px;
+  font-size: 25px;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    height: 150vh;
+  }
+  .content-container {
+    display: block;
+  }
+  nav {
+    margin-left: 20%;
+  }
+  main {
+    width: 75%;
+  }
+  .song-main img {
+    width: 200px;
+    padding: 20px;
+    border-radius: 30px;
+  }
+  .song-main {
+    overflow-x: auto; /* 수평 스크롤 활성화 */
+    overflow-y: hidden; /* 세로 스크롤 비활성화 */
+    white-space: nowrap;
+  }
+  .song-main::-webkit-scrollbar {
+    display: none;
+  }
+  footer {
+    margin-left: 8% !important;
+  }
+  aside {
+    width: 75% !important;
+  }
+}
+
+aside {
+  display: grid;
+  background-color: rgba(255, 255, 255, 0.277);
+  margin: 20px 0 0 8%;
+  padding: 40px;
+  width: 32%;
+  border-radius: 50px;
+  height: 75vh;
+  justify-content: center;
+}
+
+aside img {
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 440px;
+}
+
+.audio-title {
+  font-size: 40px;
+  margin: -35px 0 10px 0;
+  font-weight: bold;
+}
+
+.audio-singer {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.audio-player {
+  width: 400px;
+  padding: 20px;
+  background: #b692ca00;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50px;
+}
+.audio-controls {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 3px;
+}
+.play-btn {
+  background: #ffffff00;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background 0.3s;
+}
+.play-btn:hover {
+  background: #b692ca77;
+}
+.progress-bar {
+  flex-grow: 1;
+  height: 10px;
+  background: #eedff6;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  margin-top: 10px;
+}
+.progress-bar div {
+  height: 100%;
+  width: 0%;
+  background: #d8c0e5;
+  transition: width 0.1s linear;
+}
+.time {
+  font-size: 12px;
+  color: #555;
+  margin-left: 14px;
+  margin-top: 10px;
+}
+
+footer {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  margin: 10% 0 50px 23%;
+}
+
+.footer-label {
+  font-size: 28px;
+  text-decoration: none;
+  color: whitesmoke;
+  margin-right: 10%;
+}
+
+footer i {
+  font-weight: bold;
+  background: linear-gradient(-45deg, #e846a7, #4768d5); /* 그라데이션 색상 */
+  -webkit-background-clip: text; /* 텍스트 영역만 배경을 보이게 */
+  -webkit-text-fill-color: transparent;
+
+  font-size: 45px;
+  margin-right: 30px;
+}
+
+.youra-images {
+  display: grid;
+  width: 45vw;
+  height: 90vh;
+  margin: 20px 20px 30px 10%;
+  padding: 10px;
+  grid-template-areas:
+    "youra-img1 youra-img1 youra-img2"
+    "youra-img5 youra-img4 youra-img3";
+  grid-template-columns: repeat(3, 1fr); /* 열 3개 */
+  grid-template-rows: 100px 100px; /* 행 3개, 높이 100px */
+}
+
+.youra-img1 {
+  grid-area: youra-img1;
+  width: 95%;
+  margin-bottom: 10px;
+  padding-left: 5%;
+}
+.youra-img2 {
+  grid-area: youra-img2;
+  width: 100%;
+  padding-top: 10%;
+  padding-left: 5%;
+}
+.youra-img3 {
+  grid-area: youra-img3;
+  width: 100%;
+  padding-top: 105%;
+  padding-left: 20%;
+}
+.youra-img4 {
+  grid-area: youra-img4;
+  width: 100%;
+  padding-top: 100%;
+  padding-left: 10%;
+}
+.youra-img5 {
+  grid-area: youra-img5;
+  width: 100%;
+  padding-top: 100%;
+  padding-right: 10%;
+}
+
+.about-title {
+  font-size: 50px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.about-content {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.about-content span {
+  font-size: 30px;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+hr {
+  border-color: whitesmoke;
+}
